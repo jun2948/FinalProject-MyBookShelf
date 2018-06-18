@@ -1,0 +1,47 @@
+body {
+    background-color: darkgreen;
+    height: 100%;
+}
+
+.Container {
+    font-family: Oswals-Regular;
+    margin-top: 100px;
+}
+
+#Top h1 {
+    font-size: 100px;
+    color: aliceblue;
+    width: 50%;
+    text-align: center;
+}
+
+.container-login100-form-btn {
+    width:50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+a{
+    color: aliceblue;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #111111;
+}
+
+.container-login100-form-btn span{
+    margin-right: 50px; 
+}
