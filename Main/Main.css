@@ -1,0 +1,331 @@
+body {
+    width: 100%;
+    overflow: visible;
+}
+
+#search {
+    margin-left: 40%;
+    width: 250px;
+}
+
+.hard input {
+    margin-left: 170px;
+    
+}
+
+.flipbook .odd textarea {
+    width: 460px;
+    overflow: hidden;
+    margin-left: 30px;
+    border-style: none;
+}
+
+.flipbook .even textarea {
+    width: 460px;
+    overflow: hidden;
+    margin-right: 30px;
+    border-style: none;
+}
+.Container {
+    width: 90%;
+}
+
+.main-form {
+    width:100%;
+    height:700px;
+    overflow:hidden;
+    position:absolute;
+    -webkit-transition:height 1s;
+    -moz-transition:height 1s;
+    -ms-transition:height 1s;
+    -o-transition:height 1s;
+    transition:height 1s;
+}
+
+
+/*    */
+.main-form h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#garbage{
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 200px;
+}
+
+#garbage:hover {
+    cursor: pointer;
+    -webkit-transform: scale3d(1.1,1.1,1);
+    -moz-transform: scale3d(1.1,1.1,1);
+    -o-transform: scale3d(1.1,1.1,1);
+    -ms-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);
+
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
+}
+
+.bookshelf{
+    background: url(/Images/Capture.JPG);
+    float: left;
+    margin-top: 50px;
+    margin-left: 35%;
+    width:500px; 
+    background-repeat: no-repeat;
+    height:500px;
+/*    */
+    -webkit-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    -ms-transition:all 0.5s;
+    transition:all 0.5s;
+}
+
+.books{
+    margin-left: 30px;
+    position: relative;
+    
+}
+
+.books .loc{
+    background-color: hotpink;
+    border-radius: 2%;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.4);
+    display: inline-block;
+    width: 30px;
+    height: 70px;
+    margin-left: 2px;
+    position: relative;
+    visibility: hidden;
+}
+
+.books .loc:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.4);
+}
+
+#row1{
+    margin-top: 23px;
+}
+
+#row2{
+    margin-top: 15px;
+}
+
+#row3{
+    margin-top: 13px;
+}
+
+#row4{
+    margin-top: 15px;
+}
+
+#row5 {
+   margin-top: 15px;
+}
+
+.flipbook{
+    position: relative;
+    width: 30px;
+    height: 70px;
+    left: -250px;
+    visibility: hidden;
+}
+
+.flipbook .even{
+    background-image:url(../turnjs4/samples/steve-jobs/pics/gradient-page-left.jpg);
+    background-position:right top;
+    background-repeat:repeat-y;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.8);
+    
+    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+    
+    
+}
+
+.flipbook .odd{
+    background-image:url(../turnjs4/samples/steve-jobs/pics/gradient-page-right.jpg);
+    background-position:left top;
+    background-repeat:repeat-y;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.4);
+    
+    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #fff), color-stop(1, #cacaca));
+    background-image:-webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
+    background-image:-moz-linear-gradient(right, #fff 95%, #cacaca 100%);
+    background-image:-ms-linear-gradient(right, #fff 95%, #cacaca 100%);
+    background-image:-o-linear-gradient(right, #fff 95%, #cacaca 100%);
+    background-image:linear-gradient(right, #fff 95%, #cacaca 100%);
+}
+
+.flipbook .page-wrapper{
+    -webkit-perspective:2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    perspective: 2000px;
+}
+
+.flipbook .shadow{
+    -webkit-transition: -webkit-box-shadow 0.5s;
+    -moz-transition: -moz-box-shadow 0.5s;
+    -o-transition: -webkit-box-shadow 0.5s;
+    -ms-transition: -ms-box-shadow 0.5s;
+
+    -webkit-box-shadow:0 0 10px #999;
+    -moz-box-shadow:0 0 10px #999;
+    -ms-box-shadow:0 0 10px #999;
+    -o-box-shadow:0 0 10px #999;
+    box-shadow:0 0 10px #999;
+}
+
+.optionButton {
+    width: 10%;
+    float: right;
+    margin-top: 40px;
+    margin-right: 120px;
+}
+
+.optionButton .icon{
+    position: relative;
+    margin-top: 30px;
+    background-color: rgb(75, 75, 75, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.optionButton .icon img {
+    width: 50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.optionButton div:hover,
+.bookcolor li:hover{
+    cursor: pointer;
+    -webkit-transform: scale3d(1.1,1.1,1);
+    -moz-transform: scale3d(1.1,1.1,1);
+    -o-transform: scale3d(1.1,1.1,1);
+    -ms-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);
+
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
+}
+
+.optionButton div:active,
+.bookcolor li:active{
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.0);
+}
+
+div #bookicon {
+    margin-top: 30px;
+}
+
+
+.bookcolor {
+    visibility: hidden;
+    opacity: 0;
+    
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    -ms-transition:all 1s;
+    transition:all 1s;
+}
+
+.bookcolor li{
+    position: relative;
+    list-style: none;
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+.createdBook{
+    opacity: 0;
+    position: relative;
+    margin-left: 30px;
+    margin-top: 40px;
+    width: 50px;
+    height: 60px;
+    background-color: rgb(75, 75, 75, 1.0);
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+.animated{
+    -webkit-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    -ms-transition:all 0.5s;
+    transition:all 0.5s;
+}
+
+.createdBook:hover {
+    cursor: pointer;
+    -webkit-transform: scale3d(1.1,1.1,1);
+    -moz-transform: scale3d(1.1,1.1,1);
+    -o-transform: scale3d(1.1,1.1,1);
+    -ms-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);
+
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
+}
+
+.return {
+    float: left;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 60px;
+    opacity: 0;
+    margin-top: 30px;
+    margin-left: 80px;
+    
+    
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    -ms-transition:all 1s;
+    transition:all 0.5s;
+}
+
+.return .delete {
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    -ms-transition:all 1s;
+    transition:all 0.5s;
+}
+
+
+.return .deleteWithColor{
+    margin-left: -64px;
+    opacity: 0;
+    
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+    -ms-transition:all 1s;
+    transition:all 0.5s;
+}
+
