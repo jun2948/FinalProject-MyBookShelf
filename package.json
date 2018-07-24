@@ -1,0 +1,25 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "this is final project web application",
+  "main": "app.json",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jum2948/Mybookshelf-webApplication.git"
+  },
+  "keywords": [
+    "mybookshelf"
+  ],
+  "author": "jumpei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jum2948/Mybookshelf-webApplication/issues"
+  },
+  "homepage": "https://github.com/jum2948/Mybookshelf-webApplication#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

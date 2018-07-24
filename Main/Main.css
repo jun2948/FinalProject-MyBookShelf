@@ -8,9 +8,8 @@ body {
     width: 250px;
 }
 
-.hard input {
+#toppage input {
     margin-left: 170px;
-    
 }
 
 .flipbook .odd textarea {
@@ -86,19 +85,22 @@ body {
 .books{
     margin-left: 30px;
     position: relative;
-    
+}
+
+#num {
+    background-color: green;
 }
 
 .books .loc{
-    background-color: hotpink;
     border-radius: 2%;
+/*    background-color: green;*/
     box-shadow: 0 3px 3px 3px rgba(0,0,0,0.4);
     display: inline-block;
     width: 30px;
     height: 70px;
     margin-left: 2px;
     position: relative;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .books .loc:hover {
@@ -132,36 +134,35 @@ body {
     height: 70px;
     left: -250px;
     visibility: hidden;
-}
-
-.flipbook .even{
-    background-image:url(../turnjs4/samples/steve-jobs/pics/gradient-page-left.jpg);
-    background-position:right top;
-    background-repeat:repeat-y;
-    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.8);
-    
-    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
-    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
-    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
-    
-    
-}
-
-.flipbook .odd{
-    background-image:url(../turnjs4/samples/steve-jobs/pics/gradient-page-right.jpg);
-    background-position:left top;
-    background-repeat:repeat-y;
-    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.4);
-    
     background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #fff), color-stop(1, #cacaca));
     background-image:-webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
     background-image:-moz-linear-gradient(right, #fff 95%, #cacaca 100%);
     background-image:-ms-linear-gradient(right, #fff 95%, #cacaca 100%);
     background-image:-o-linear-gradient(right, #fff 95%, #cacaca 100%);
     background-image:linear-gradient(right, #fff 95%, #cacaca 100%);
+}
+
+#toppage {
+    background-color: green;
+}
+.flipbook .even{
+    background-image:url(../turnjs4/samples/steve-jobs/pics/gradient-page-left.jpg);
+    background-position:right top;
+    background-repeat:repeat-y;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.8);
+    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+}
+
+.flipbook .odd .flippage{
+    background-image:url(../turnjs4/samples/steve-jobs/pics/gradient-page-right.jpg);
+    background-position:left top;
+    background-repeat:repeat-y;
+    box-shadow: 0 3px 3px 3px rgba(0,0,0,0.4);
 }
 
 .flipbook .page-wrapper{

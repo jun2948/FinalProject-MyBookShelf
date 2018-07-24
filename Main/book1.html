@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Main/Main.css">
+    <title>Document</title>
+    <style>
+        .flipbook {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+  <h1>book1</h1>
+       <div class="flipbook" id="book3">
+            <div class="hard"></div>
+            <div class="fippage">1</div>
+            <div class="fippage">2</div>
+            <div class="fippage"></div>
+            <div class="fippage"></div>
+            <div class="fippage"></div>
+            <div class="fippage"></div>
+            <div class="hard"></div>
+        </div>
+    
+    <script src="/Main/jquery-3.3.1.min.js"></script>
+    <script src="/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="/turnjs4/lib/turn.html4.min.js"></script>
+    <script src="/turnjs4/lib/turn.min.js"></script>
+    <script src="/turnjs4/lib/turn.js"></script>
+    <script src="/Main/drag-drop.js"></script>
+    <script src="/Main/Main.js"></script>
+    <script src="/Main/flippage.js"></script>
+    <script src="/Main/turn.js"></script>
+    <script src="/turnjs4/extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript">
+        $('#book3').turn({
+            height: 600,
+            width: 1000,
+            autoCenter: true,
+            elevation: 50,
+            gradients: true,
+            duration: 1000,
+        });
+        yepnope({
+            test : Modernizr.csstransforms,
+            yep : ['../turnjs4/lib/turn.js'],
+            nope : ['../turnjs4/lib/turn.html4.min.js'],
+            both : ['/Main/Main.css'],
+            complete : loadApp
+        });
+    </script>
+</body>
+</html>
