@@ -1,17 +1,33 @@
 (function($){
     $(function click(){
         $("#bookButton").on('click',function(){
-            setTimeout( function(){
+            if($("#bookButton").attr("show") == "off"){
+                $("#bookButton").attr("show","on");
+                setTimeout( function(){
                 $('.bookcolor').css({ 
                     visibility :'visible',
                     opacity: '1.0'
                 });
-            },500);
-            setTimeout( function(){
-                $('.createdBook').css({ 
-                    opacity: '1.0'
+                },500);
+                setTimeout( function(){
+                    $('.createdBook').css({ 
+                        opacity: '1.0'
+                    });
+                }, 1000);
+            }else if($("#bookButton").attr("show") == "on"){
+                $("#bookButton").attr("show","off");
+                setTimeout( function(){
+                $('.bookcolor').css({ 
+                    visibility :'visible',
+                    opacity: '0'
                 });
-            }, 1000);
+                },500);
+                setTimeout( function(){
+                    $('.createdBook').css({ 
+                        opacity: '0'
+                    });
+                }, 1000);
+            }
     });
 });
 
@@ -55,7 +71,7 @@
 //                $.ajax({
 //                    url: 'book1.html',
 //                    datatype: 'html',
-//                    timeout: 500,
+//                    timeout: 1500,
 //                }).done(function(data){
 //                    $('#row1-3').load('/Main/book1.html');
 //                })

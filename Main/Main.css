@@ -55,17 +55,6 @@ body {
     margin-left: 200px;
 }
 
-#garbage:hover {
-    cursor: pointer;
-    -webkit-transform: scale3d(1.1,1.1,1);
-    -moz-transform: scale3d(1.1,1.1,1);
-    -o-transform: scale3d(1.1,1.1,1);
-    -ms-transform: scale3d(1.1,1.1,1);
-    transform: scale3d(1.1,1.1,1);
-
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
-}
-
 .bookshelf{
     background: url(/Images/Capture.JPG);
     float: left;
@@ -74,12 +63,7 @@ body {
     width:500px; 
     background-repeat: no-repeat;
     height:500px;
-/*    */
-    -webkit-transition:all 0.5s;
-    -moz-transition:all 0.5s;
-    -o-transition:all 0.5s;
-    -ms-transition:all 0.5s;
-    transition:all 0.5s;
+    position: absolute;
 }
 
 .books{
@@ -129,7 +113,7 @@ body {
 }
 
 .flipbook{
-    position: relative;
+    position: absolute;
     width: 30px;
     height: 70px;
     left: -250px;
