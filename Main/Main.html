@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>MainPage</title>
     <link rel="stylesheet" href="/Main/Main.css">
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="/slick-1.8.1/slick/slick-theme.css">
 </head>
 <body>
     <div id="garbage">
@@ -11,9 +13,10 @@
     </div>
     <div class="Container">
        <div class="main-form">
-          <h1>My BookShelf</h1>
+          <h1 id="bookshelftitle">My BookShelf</h1>
             <input type="text" id="search" placeholder="search books">
-            <div class="bookshelf">
+            <div class="slide">
+                <div class="bookshelf">
                 <div class="books" id="row1">
                     <div class="loc" drag-and-drop="off">
                         <div class="flipbook" id="row1-1">
@@ -22,31 +25,13 @@
                                 <input type="text" class="title" placeholder="set a book title">
                             </div>
                             <div class="hard">2</div>
-                            <div class="flippage">
-                                <textarea class="input" id="text" name="2" cols="68" rows="39" wrap="hard" onchange="Limit(event)" onkeyup="Limit(event)"></textarea>
-                            </div>
-                            <div class="flippage">
-                                <textarea class="input" name="3" id="text" cols="68" rows="39" wrap="hard" onchange="Limit(event)" onkeyup="Limit(event)"></textarea>
-                            </div>
-                            <div class="flippage">4</div>
-                            <div class="flippage">3</div>
-                            <div class="flippage">4</div>
-                            <div class="flippage">3</div>
-                            <div class="flippage">4</div>
-                            <div class="hard">6</div>
-                        </div>
+                        </div>  
                     </div>
                     <div class="loc" drag-and-drop="off">
                         <div class="flipbook" id="row1-2">
-                            <div class="hard"></div>
-                            <div class="hard"></div>
-                            <div class="flippage"></div>
-                            <div class="flippage"></div>
-                            <div class="hard"></div>
-                            <div class="hard"></div>
                         </div>
                     </div>
-                    <div class="loc" drag-and-drop="off" id="row1-3">
+                    <div class="loc" drag-and-drop="off">
                     </div>
                     <div class="loc" drag-and-drop="off">
                         <div class="flipbook">
@@ -424,7 +409,16 @@
                             <div class="hard"></div>
                         </div>
                     </div>
+                    <div class="loc" drag-and-drop="off">
+                        <div class="flipbook">
+                            <div class="hard"></div>
+                            <div></div>
+                            <div></div>
+                            <div class="hard"></div>
+                        </div>
+                    </div>
                 </div>
+              </div>
             </div>
        </div>
     </div>
@@ -432,7 +426,7 @@
         <img src="/icon/delete.png" alt="" class="delete"><img src="/icon/deleteWithColor.png" alt="" class="deleteWithColor">
     </div>
     <div class="optionButton">
-        <div class="icon">
+        <div class="icon" id="bookshelfButton">
             <img src="../icon/bookshelfIcon.png" alt="">
         </div>
         <div class="icon" id="bookButton" show="off">
@@ -456,6 +450,7 @@
     <script src="/Main/turn.js"></script>
     <script src="/turnjs4/extras/modernizr.2.5.3.min.js"></script>
     <script src="/turnjs4/lib/hash.js"></script>
+    <script src="/slick-1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript">
         yepnope({
             test : Modernizr.csstransforms,

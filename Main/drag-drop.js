@@ -15,7 +15,7 @@ $(function dragable() {
 //                $('<div class="hard">').append('<h1 class="header">No Title</h1>');
 //                $('.hard').append('<input type="text class="title" placeholder="set a book title">');
 //                $('.hard').append('</div>');
-            $('.books .loc').css( {visibility: 'visible'});
+            $('.books').css( {visibility: 'visible'});
         },
         out: function(e,ui){
             $('.createdBook').css({
@@ -24,14 +24,5 @@ $(function dragable() {
             });
         }
     });
-    
-//    $('.books .loc').draggable();
-//    $('#garbage').droppable({
-//        drop: function(e,ui){
-//            $('.books .loc').css({
-//                visibility: 'hidden'
-//            });
-//        }
-//    });
 });
 

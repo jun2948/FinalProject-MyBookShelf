@@ -28,15 +28,48 @@
                     });
                 }, 1000);
             }
+        });
     });
-});
 
-//$(function pages(){
-//    for(var i = 0; i < 30; i++){
-//        $('#row1-2').append('<div class="flippage"></div>');
-//        $('.flippage').append('<textarea class="input" id="text" name="2" cols="68" rows="39" wrap="hard" onchange="Limit(event)" onkeyup="Limit(event)"></textarea>');
-//    }
-//});
+    $(function pages(){
+        for(var i = 0; i < 30; i++){
+            $('#row1-1').append('<div class="flippage"></div>');
+            $('.flippage').append('<textarea class="input" id="text" name="2" cols="68" rows="39" wrap="hard" onchange="Limit(event)" onkeyup="Limit(event)"></textarea>');
+        }
+        $(".flipbook").append('<div class="hard"></div>');
+    });
+    
+    $(function clickshlefButton(){
+        $('#bookshelfButton').on('click',function(){
+            var slideIndex = 0;
+            slideIndex++;
+            $(".slide").append('<div class="bookshlef"></div>');
+            $('.slide').addClass('slidemode');
+            $('.slidemode').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            });
+            setTimeout( function(){
+                $('.return').css({ opacity: '1.0'});
+            },1500);
+            $('.return').mouseover(function() {
+                $('.return .deleteWithColor').css({ opacity: '1.0'});
+                $('.return .delete').css({ opacity: '0'});
+            }).mouseout( function() {
+                $('.return .deleteWithColor').css({ opacity: '0'});
+                $('.return .delete').css({ opacity: '1.0'});
+            });
+        });
+        $('.return').on('click',function(){
+            $('.slide').removeClass('slidemode');
+            setTimeout( function(){
+                $('.return').css({ opacity: '0'});
+            },1500);
+        });
+        
+    });
 
     $(function clickColor(){
         $('#red').on('click',function(){
@@ -58,7 +91,10 @@
                 $this.attr("drag-and-drop","on");
                 $("#garbage").hide(1500);
                 $("div[drag-and-drop='off']").hide(1500);
+                $('#bookshelftitle').fadeOut(1500);
+                $('#search').fadeOut(1500);
                 $(".optionButton").hide(1500);
+                $('.slide').addClass('animated');
                 $('.flipbook').css({
                     visibility: 'visible'
                 });
@@ -66,15 +102,19 @@
                     width: '500px',
                     height: '600px',
                     left: '-80px',
-                    top: '-150'
+                    top: '-35'
                 },1500);
-//                $.ajax({
-//                    url: 'book1.html',
-//                    datatype: 'html',
-//                    timeout: 1500,
-//                }).done(function(data){
-//                    $('#row1-3').load('/Main/book1.html');
-//                })
+                // load html
+//                $('.flipbook').load('book1.html',function(){
+//                    $.getScript("turn.js",function(){
+//                        loadApp();
+//                    });
+//                });
+                setTimeout( function(){
+                    $('.slide').css({
+                        marginTop: 100
+                    });
+                },1500);
                 setTimeout( function(){
                     $('.return').css({ opacity: '1.0'});
                 },1500);
@@ -121,14 +161,14 @@
             setTimeout( function(){
                 $('.return').css({ opacity: '0'});
             },1500);
-
+            $('.slide').css({marginTop: 50});
             $("#garbage").show(1500);
+            $('#bookshelftitle').fadeIn(1500);
+            $('#search').fadeIn(1500);
             $("div[drag-and-drop='off']").show(1500);
             $(".optionButton").show(1500);
+            
         });
     });
 
 })(jQuery);
-
-
-

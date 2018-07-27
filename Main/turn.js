@@ -17,7 +17,7 @@ function loadApp(){
 //    });
     
     $(function turn(){
-        $('#row1-1').turn({
+        $('.flipbook').turn({
             height: 600,
             width: 1000,
             autoCenter: true,
@@ -25,6 +25,7 @@ function loadApp(){
             gradients: true,
             duration: 1000,
         });
+        
     });
     
     function lineCheck(e){
